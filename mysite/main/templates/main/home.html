@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block name %}Home Page{% endblock %}
+
+
+{% block body %}
+
+    {% for i in phone_list %}
+        <h3>{{ i.name }}</h3>
+        <img src="{{ i.img.url }}" width="400px" alt="">
+        <p>{{ i.price }}</p>
+        <hr>
+    {% endfor %}
+
+{% endblock %}
